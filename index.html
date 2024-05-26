@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Administrador de canchas</title>
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+
+<body class="bg-gray-100 h-screen">
+    <h1 class="font-black text-5xl text-center md:w-2/3 mx-auto mt-20">
+        Reserva tu
+        <span class="text-indigo-700">Cancha</span>
+    </h1>
+
+    <div class="mt-12 md:flex container mx-auto ">
+        <div class="md:w-1/2 lg:w-2/5 mx-5">
+            <h2 class="font-black text-3xl text-center">Gestiona tu Cancha</h2>
+
+            <p class="text-lg mt-5 text-center mb-10">
+                Ingresa tu cancha y
+                <span class="text-indigo-600 font-bold">Administra</span>
+            </p>
+
+            <form id="formulario-reserva" class="bg-white shadow-md rounded-lg py-10 px-5 mb-10">
+
+                <div class="mb-5">
+                    <label for="cliente" class="block text-gray-700 uppercase font-bold text-sm">
+                        Cliente
+                    </label>
+                    <input class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md" type="text" id="cliente"
+                        placeholder="Nombre Cliente" name="cliente" />
+                </div>
+                <div class="mb-5">
+                    <label for="email" class="block text-gray-700 uppercase font-bold text-sm">
+                        Email Contacto
+                    </label>
+                    <input class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md" type="email" id="email"
+                        placeholder="E-mail Contacto" name="email" />
+                </div>
+                <div class="mb-5">
+                    <label for="deporte" class="block text-gray-700 uppercase font-bold text-sm">
+                        Deporte
+                    </label>
+                    <input class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md" type="text" id="deporte"
+                        placeholder="Futbol" name="deporte" />
+                </div>
+
+                <div class="mb-5">
+                    <label for="fecha" class="block text-gray-700 uppercase font-bold text-sm">
+                        Fecha
+                    </label>
+                    <input class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md" type="date" id="fecha"
+                        name="fecha" />
+                </div>
+
+
+                <div class="mb-5">
+                    <label for="cancha" class="block text-gray-700 uppercase font-bold text-sm">Selecciona una
+                        opción:</label>
+                    <select class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md" id="cancha" name="cancha">
+                        <option value="option">Selecciona una opción</option>
+                        <option value="Cancha 1">Cancha 1</option>
+                        <option value="Cancha 2">Cancha 2</option>
+                        <option value="Cancha 3">Cancha 3</option>
+                    </select>
+                </div>
+
+
+                <input type="submit"
+                    class="bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-colors"
+                    value='Registrar Reserva' />
+            </form>
+        </div>
+
+        <div class="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
+            <h2 class="font-black text-3xl text-center">Listado Reservas</h2>
+            <p class="text-xl mt-5 mb-10 text-center">
+                Administra tus
+                <span class="text-indigo-600 font-bold ">Reservas</span>
+            </p>
+            <div id="reservas">
+                <p class="text-xl mt-5 mb-10 text-center">No Hay Reservas</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
